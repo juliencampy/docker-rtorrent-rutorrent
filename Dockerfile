@@ -154,8 +154,8 @@ RUN export BUILD_DEPS="build-base \
     ## Install geoip files
     && mkdir -p /usr/share/GeoIP \
     && cd /usr/share/GeoIP \
-    && wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz \
-    && wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz \
+    && wget https://github.com/DocSpring/geolite2-city-mirror/raw/master/GeoLite2-City.tar.gz \
+    && wget https://geolite.clash.dev/GeoLite2-Country.tar.gz \
     && tar xzf GeoLite2-City.tar.gz \
     && tar xzf GeoLite2-Country.tar.gz \
     && rm -f *.tar.gz \
