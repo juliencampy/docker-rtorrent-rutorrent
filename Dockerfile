@@ -172,7 +172,7 @@ RUN export BUILD_DEPS="build-base \
     && strip -s /usr/local/bin/rtorrent \
     && strip -s /usr/local/bin/mktorrent \
     && strip -s /usr/local/bin/mediainfo \
-    && apk del -X http://dl-cdn.alpinelinux.org/alpine/v3.6/main --no-cache ${BUILD_DEPS} cppunit-dev \
+    && apk del -X http://dl-cdn.alpinelinux.org/alpine/v3.8/main --no-cache ${BUILD_DEPS} cppunit-dev \
     && rm -rf /tmp/*
 
 ARG WITH_FILEBOT=NO
