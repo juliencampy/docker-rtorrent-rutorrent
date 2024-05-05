@@ -155,7 +155,7 @@ RUN export BUILD_DEPS="build-base \
     && mkdir -p /usr/share/GeoIP \
     && cd /usr/share/GeoIP \
     && wget https://github.com/DocSpring/geolite2-city-mirror/raw/master/GeoLite2-City.tar.gz \
-    && wget https://geolite.clash.dev/GeoLite2-Country.tar.gz \
+    && wget https://github.com/juliencampy/docker-rtorrent-rutorrent/raw/master/GeoLite2-Country.tar.gz \
     && tar xzf GeoLite2-City.tar.gz \
     && tar xzf GeoLite2-Country.tar.gz \
     && rm -f *.tar.gz \
