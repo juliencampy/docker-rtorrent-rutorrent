@@ -40,7 +40,7 @@ RUN export BUILD_DEPS="build-base \
     ## Download Package
     && if [ "$RTORRENT_VER" == "0.9.6" ]; then CPPUNIT_VER="==1.13.2-r1"; fi \
     && apk upgrade --no-cache \
-    && apk add -X http://dl-cdn.alpinelinux.org/alpine/v3.8/main --no-cache ${BUILD_DEPS} \
+    && apk add -X http://dl-cdn.alpinelinux.org/alpine/v3.6/main --no-cache ${BUILD_DEPS} \
                 ffmpeg \
                 libnl3 \
                 ca-certificates \
@@ -163,6 +163,7 @@ RUN export BUILD_DEPS="build-base \
     && cp *.mmdb /var/www/html/torrent/plugins/geoip2/database/ \
     && wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem \
     && chmod 744 /etc/ssl/certs/cacert.pem \
+    && RUN pecl channel-update pecl.php.net \
     && pecl install geoip-${GEOIP_VER} \
     && chmod +x /usr/lib/php7/modules/geoip.so \
     ## Install cfscrape
@@ -171,7 +172,7 @@ RUN export BUILD_DEPS="build-base \
     && strip -s /usr/local/bin/rtorrent \
     && strip -s /usr/local/bin/mktorrent \
     && strip -s /usr/local/bin/mediainfo \
-    && apk del -X http://dl-cdn.alpinelinux.org/alpine/v3.8/main --no-cache ${BUILD_DEPS} cppunit-dev \
+    && apk del -X http://dl-cdn.alpinelinux.org/alpine/v3.6/main --no-cache ${BUILD_DEPS} cppunit-dev \
     && rm -rf /tmp/*
 
 ARG WITH_FILEBOT=NO
