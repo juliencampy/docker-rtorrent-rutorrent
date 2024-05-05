@@ -40,7 +40,7 @@ RUN export BUILD_DEPS="build-base \
     ## Download Package
     && if [ "$RTORRENT_VER" == "0.9.6" ]; then CPPUNIT_VER="==1.13.2-r1"; fi \
     && apk upgrade --no-cache \
-    && apk add -X http://dl-cdn.alpinelinux.org/alpine/v3.6/main --no-cache ${BUILD_DEPS} \
+    && apk add -X http://dl-cdn.alpinelinux.org/alpine/v3.8/main --no-cache ${BUILD_DEPS} \
                 ffmpeg \
                 libnl3 \
                 ca-certificates \
