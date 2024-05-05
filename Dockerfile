@@ -163,7 +163,7 @@ RUN export BUILD_DEPS="build-base \
     && cp *.mmdb /var/www/html/torrent/plugins/geoip2/database/ \
     && wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem \
     && chmod 744 /etc/ssl/certs/cacert.pem \
-    && RUN pecl channel-update pecl.php.net \
+    && pecl channel-update pecl.php.net \
     && pecl install geoip-${GEOIP_VER} \
     && chmod +x /usr/lib/php7/modules/geoip.so \
     ## Install cfscrape
